@@ -1,0 +1,23 @@
+{
+  "name": "git-flow-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "scripts": {
+    "pull": "git pull && git flow init -d && npm install",
+    "push": "git add . && git commit -m \"$MSG\"",
+    "feature": "npm run feature:start && npm run feature:finish",
+    "feature:start": "git flow feature start",
+    "feature:finish": "npm run push && git flow feature finish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radovandelic/git-flow-scripts.git"
+  },
+  "author": "Radovan Delic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radovandelic/git-flow-scripts/issues"
+  },
+  "homepage": "https://github.com/radovandelic/git-flow-scripts#readme"
+}
