@@ -5,7 +5,7 @@
   "main": "package.json",
   "scripts": {
     "pull": "git pull && git flow init -d && npm install",
-    "push": "git add . && git commit -m \"$MSG\" && git push",
+    "push": "git add . && git commit -m \"$MSG\" && git push -u origin develop",
     "feature": "npm run feature:start && npm run feature:finish",
     "feature:start": "git flow feature start",
     "feature:finish": "npm run push && git flow feature finish"
