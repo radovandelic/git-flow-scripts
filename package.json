@@ -6,9 +6,9 @@
   "scripts": {
     "pull": "git pull origin develop && git flow init -d && npm install && git branch --set-upstream-to=origin/develop develop",
     "push": "git add . && git commit -m \"$MSG\" && git push -u origin develop",
-    "feature": "npm run feature:start && npm run feature:finish",
-    "feature:start": "git flow feature start",
-    "feature:finish": "npm run push && git flow feature finish"
+    "feature": "npm run feature:start",
+    "feature:start": "git flow feature start $NAME",
+    "feature:finish": "git add . && git commit -m \"$MSG\" && git flow feature finish $NAME && npm run push"
   },
   "repository": {
     "type": "git",
