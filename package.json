@@ -1,14 +1,14 @@
 {
   "name": "git-flow-scripts",
   "version": "1.1.7",
-  "description": "",
+  "description": "scripts to simplify git/npm workflow",
   "main": "package.json",
   "scripts": {
     "import": "git pull origin develop && git flow init -d && git checkout develop && npm install && git branch --set-upstream-to=origin/develop develop",
-    "push": "git add . && ( git commit -m \"$MSG\" && npm version ${V:-patch} ) || echo \"\\033[1;33mWARNING:\\033[m nothing to commit or commit message empty\" && git push",
-    "feature": "npm run feature:start",
-    "feature:start": "git flow feature start $NAME",
-    "feature:finish": "git add . && git commit -m \"$MSG\" && git flow feature finish $NAME && npm run push"
+    "push": "git add . && ( git commit -m \"$NAME $MSG\" && npm version ${V:-patch} ) || echo \"\\033[1;33mWARNING:\\033[m nothing to commit or commit message empty\" && git push",
+    "feat": "npm run feat:start",
+    "feat:start": "git flow feature start $NAME",
+    "feat:done": "MSG=\"$NAME $MSG\" git add . && git commit -m \"$MSG\" && git flow feature finish $NAME && npm run push"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,5 @@
     "url": "https://github.com/radovandelic/git-flow-scripts/issues"
   },
   "homepage": "https://github.com/radovandelic/git-flow-scripts#readme",
-  "dependencies": {
-    "lodash": "^4.17.10"
-  }
+  "dependencies": {}
 }
