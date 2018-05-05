@@ -4,7 +4,7 @@
   "description": "",
   "main": "package.json",
   "scripts": {
-    "pull": "git pull && git flow init -d && npm install",
+    "pull": "git pull origin develop && git flow init -d && npm install && git branch --set-upstream-to=origin/develop develop",
     "push": "git add . && git commit -m \"$MSG\" && git push -u origin develop",
     "feature": "npm run feature:start && npm run feature:finish",
     "feature:start": "git flow feature start",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/radovandelic/git-flow-scripts/issues"
   },
-  "homepage": "https://github.com/radovandelic/git-flow-scripts#readme"
+  "homepage": "https://github.com/radovandelic/git-flow-scripts#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
 }
