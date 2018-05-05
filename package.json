@@ -8,7 +8,7 @@
     "push": "git add . && ( git commit -m \"$NAME $MSG\" && npm version ${V:-patch} ) || echo \"\\033[1;33mWARNING:\\033[m nothing to commit or commit message empty\" && git push",
     "feat": "npm run feat:start",
     "feat:start": "git flow feature start $NAME",
-    "feat:done": "MSG=\"$NAME $MSG\" git add . && git commit -m \"$MSG\" && git flow feature finish $NAME && npm run push"
+    "feat:done": "git add . && git commit -m \"$NAME $MSG\" && git flow feature finish $NAME && npm run push"
   },
   "repository": {
     "type": "git",
