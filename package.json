@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/radovandelic/git-flow-scripts.git"
   },
-  "author": "Radovan Delic",
+  "author": "Radovan Delić",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/radovandelic/git-flow-scripts/issues"
