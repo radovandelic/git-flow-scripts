@@ -4,8 +4,8 @@
   "description": "",
   "main": "package.json",
   "scripts": {
-    "pull": "git pull origin develop && git flow init -d && npm install && git branch --set-upstream-to=origin/develop develop",
-    "push": "git add . && ( git commit -m \"$MSG\" || echo \"WARNING: nothing to commit or commit message empty\" ) && git push -u origin develop",
+    "import": "git pull origin develop && git flow init -d && npm install && git branch --set-upstream-to=origin/develop develop",
+    "push": "git add . && ( git commit -m \"$MSG\" || echo \"\\033[1;33mWARNING:\\033[m nothing to commit or commit message empty\" ) && git push -u origin develop",
     "feature": "npm run feature:start",
     "feature:start": "git flow feature start $NAME",
     "feature:finish": "git add . && git commit -m \"feature finished\" && git flow feature finish $NAME && npm run push"
