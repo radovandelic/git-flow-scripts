@@ -4,7 +4,7 @@
   "description": "",
   "main": "package.json",
   "scripts": {
-    "import": "git pull origin develop && git flow init -d && npm install && git branch --set-upstream-to=origin/develop develop",
+    "import": "git pull origin develop && git flow init -d && git checkout develop && npm install && git branch --set-upstream-to=origin/develop develop",
     "push": "git add . && ( git commit -m \"$MSG\" || echo \"\\033[1;33mWARNING:\\033[m nothing to commit or commit message empty\" ) && git push -u origin develop",
     "feature": "npm run feature:start",
     "feature:start": "git flow feature start $NAME",
